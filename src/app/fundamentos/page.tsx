@@ -5,7 +5,7 @@ export default function FoundationsPage() {
     <div className="eyebrow">THRIVE · CONOCIMIENTO CONECTADO</div>
     <h1>De lo fundamental a lo posible.</h1>
     <p>Descubre de dónde parte una idea, qué necesitas comprender para profundizar y cómo puede conectar con otras disciplinas.</p>
-    <p><a href="/universe">Ver universo 3D →</a></p>
+    <p><a href="/universe">Ver universo 3D →</a> · <a href="/puentes">Explorar puentes entre disciplinas →</a></p>
     <ConceptExplorer/>
   </main>;
 }
