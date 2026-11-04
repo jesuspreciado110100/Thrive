@@ -67,3 +67,26 @@
 .app-pathway-chip:hover{border-color:#95e7da}
 @media(max-width:1050px){.app-pathway-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:600px){.lesson-options{grid-template-columns:1fr}.app-pathway-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Interdisciplinary bridge explorer */
+.bridge-explorer{margin-top:24px;border:1px solid #2f4b64;border-radius:18px;background:#0c1b2f;padding:25px}
+.bridge-selector{display:flex;align-items:end;gap:17px;flex-wrap:wrap}
+.bridge-selector label{display:flex;flex:1 1 280px;min-width:0;gap:10px;flex-direction:column;color:#a9c5d5;font-size:.88rem}
+.bridge-selector select{background:#172a42;color:white;font:inherit;font-size:1rem;padding:14px;border:1px solid #46637f;border-radius:11px;max-width:100%}
+.bridge-selector>span{font-size:2rem;color:#81e4d5;padding-bottom:5px}
+.bridge-explorer h2{font-size:clamp(1.5rem,3vw,2.3rem);margin:25px 0 5px}
+.bridge-explorer h3{font-size:1.15rem;margin:24px 0 13px}
+.bridge-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:24px 0}
+.bridge-stats>div{border:1px solid #386075;padding:17px;border-radius:12px;background:#133044}
+.bridge-stats strong{display:block;font-size:2rem;color:#84e7d5}
+.bridge-stats span{font-size:.84rem;color:#b3c6d8}
+.bridge-panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.bridge-panels section{border:1px solid #2f4a64;padding:18px;border-radius:12px}
+.bridge-panels section h3{margin-top:0}
+.bridge-finding{display:flex;flex-direction:column;gap:7px;background:#152b43;padding:14px;border-radius:9px;margin-bottom:10px}
+.bridge-finding small{color:#b5c8df;line-height:1.5}
+.bridge-ideas{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.bridge-idea{padding:18px;border:1px solid #426b76;border-radius:12px;background:#122c3b}
+.bridge-idea strong{color:#c4f4e8}
+.bridge-idea small{line-height:1.55;color:#aec8d3}
+@media(max-width:650px){.bridge-explorer{padding:17px}.bridge-panels{grid-template-columns:1fr}.bridge-stats{gap:7px}.bridge-stats>div{padding:11px}.bridge-stats strong{font-size:1.6rem}}
