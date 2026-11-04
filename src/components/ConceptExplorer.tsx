@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { loadConceptModel, type Concept, type ConceptModel } from '@/lib/conceptModel';
+import LessonPractice from '@/components/LessonPractice';
+import ApplicationPathway from '@/components/ApplicationPathway';
 
 const levels = [
   { title: 'Fundamentos', subtitle: 'Observar, razonar, medir' },
@@ -93,6 +95,7 @@ export default function ConceptExplorer() {
       {selected && <section className="concept-inspector">
         <div><small>Concepto · Nivel {selected.depth} · {selected.editorial_status === 'draft' ? 'borrador editorial' : selected.editorial_status}</small>
           <h2>{selected.name}</h2><p>{selected.summary}</p>
+          <LessonPractice key={selected.slug} slug={selected.slug}/>
           <h3>Un camino desde los fundamentos</h3>
           <div className="concept-breadcrumb">{path.map((c, index) => <span key={c.id}><button onClick={() => choose(c.id)}>{c.name}</button>{index < path.length - 1 && <span aria-hidden="true"> → </span>}</span>)}</div>
           <div className="concept-relations">
@@ -114,6 +117,7 @@ export default function ConceptExplorer() {
         {chosenApp && <article className="concept-app-detail"><small>Estado: {chosenApp.evidence_status === 'hypothesis' ? 'hipótesis sin validación' : chosenApp.evidence_status}</small>
           <h3>{chosenApp.name}</h3><p><strong>Problema:</strong> {chosenApp.challenge}</p><p><strong>Hipótesis:</strong> {chosenApp.hypothesis}</p>
           <h4>Conocimientos que podrían combinarse</h4><div className="concept-tags">{appIngredients.map(link => <button className="concept-neighbor" key={link.concept_id} onClick={() => choose(link.concept_id)}>{conceptMap.get(link.concept_id)?.name ?? 'Concepto'}</button>)}</div>
+          <ApplicationPathway model={model} applicationId={chosenApp.id} onConcept={choose}/>
           <p className="concept-disclaimer">Para avanzar hace falta investigación documental, especialistas, evaluación de factibilidad y pruebas.</p>
         </article>}
       </section>
