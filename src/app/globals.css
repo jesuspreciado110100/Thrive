@@ -41,3 +41,29 @@
 .concept-error{color:#ffc8c8}
 @media(max-width:950px){.concept-depth-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.concept-inspector{grid-template-columns:1fr}.concept-inspector aside{border:0;border-top:1px solid #3c516c;padding:10px 0 0}}
 @media(max-width:600px){.concept-depth-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.concept-relations{grid-template-columns:1fr}.concept-inspector{padding:18px}}
+
+/* Progressive microlearning: local editorial drafts, not persisted grades */
+.mini-lesson{background:#0c2632;border:1px solid #397178;border-radius:16px;padding:20px;margin:20px 0}
+.mini-lesson small{font-size:.77rem;color:#a5dfd4}
+.mini-lesson h3{font-size:1.25rem;margin:10px 0}
+.lesson-example{background:#132e3c;padding:16px;border-radius:12px;border-left:3px solid #6de0d0}
+.lesson-example p{margin:7px 0 0}
+.lesson-check h4{margin:24px 0 8px}
+.lesson-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.lesson-option{font:inherit;cursor:pointer;text-align:left;border:1px solid #496375;border-radius:10px;padding:12px;background:#1d3646;color:#f1f7ff}
+.lesson-option:hover:enabled{border-color:#68dccf}
+.lesson-option:disabled{cursor:default}
+.lesson-option.correct{border-color:#66c49e;background:#174137}
+.lesson-option.incorrect{border-color:#d78a8a;background:#51363a}
+.lesson-feedback{border:1px solid #4b7580;border-radius:10px;padding:14px;margin-top:12px;background:#152e3b}
+.lesson-feedback p{margin:5px 0 9px}
+.lesson-feedback button{background:#285c64;color:#fff;border:0;border-radius:7px;padding:8px 12px;cursor:pointer}
+.app-pathway{margin:24px 0}
+.app-pathway-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:15px 0}
+.app-pathway-stage{display:flex;flex-direction:column;gap:8px;min-width:0;border:1px solid #355575;background:#0c2033;padding:12px;border-radius:12px}
+.app-pathway-stage small{font-size:.78rem;color:#c0d8e9}
+.app-pathway-chip{font:inherit;font-size:.82rem;color:#d6e7fa;border:1px solid #38536f;padding:9px;border-radius:8px;background:#1b3249;cursor:pointer;text-align:left}
+.app-pathway-chip.core{border-color:#78d9c6;color:#9ceadd}
+.app-pathway-chip:hover{border-color:#95e7da}
+@media(max-width:1050px){.app-pathway-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.lesson-options{grid-template-columns:1fr}.app-pathway-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
